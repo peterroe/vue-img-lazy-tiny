@@ -1,20 +1,30 @@
 <script setup lang="ts">
-
+const flush = () => {
+  document.location.reload(true)
+}
 </script>
 
 <template>
   <div class="demo">
-    <img v-lazy="'https://i.pinimg.com/474x/89/56/a1/8956a199a913cfa5a4a8696e6f08f821.jpg'" alt="" />
+    <img
+      v-for="it in 20"
+      :key="it"
+      v-lazy="'https://i.pinimg.com/474x/2e/b9/c1/2eb9c1a03b3b995e001915af141283b6.jpg?random=' + Math.random()"
+      alt="img" />
   </div>
 </template>
 
 <style>
 .demo {
   text-align: center;
-  width: 100vw;
-  height: 100vh;
+  flex-wrap: wrap;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+img {
+  width: 250px;
+  margin: 2em;
+  height: 200px;
 }
 </style>
