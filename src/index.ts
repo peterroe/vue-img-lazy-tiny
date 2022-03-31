@@ -1,6 +1,6 @@
 import type { App } from 'vue'
 
-export function install(app: App) {
+export default function install(app: App) {
   app.directive('lazy', {
     mounted(el, binding) {
       const img = new Image()
