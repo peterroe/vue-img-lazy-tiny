@@ -27,13 +27,15 @@ createApp(App)
 Use it in your template, your image will be lazy loaded.
 
 ```html
-<script setup lang="ts">
-  const url = 'https://avatars.githubusercontent.com/u/59404696?v=4'
-</script>
-
-<div>
-  <img v-lazy="url"/>  
-</div>
+<template>
+  <div class="demo">
+    <img
+      v-for="it in 20"
+      :key="it"
+      v-lazy="'https://i.pinimg.com/474x/2e/b9/c1/2eb9c1a03b3b995e001915af141283b6.jpg?random=' + Math.random()"
+      alt="img" />
+  </div>
+</template>
 ```
 
 ## Preview
