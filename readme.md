@@ -32,7 +32,7 @@ Use it in your template, your image will be lazy loaded.
     <img
       v-for="it in 20"
       :key="it"
-      v-lazy="'https://i.pinimg.com/474x/2e/b9/c1/2eb9c1a03b3b995e001915af141283b6.jpg?random=' + Math.random()"
+      v-lazy="'https://unsplash.it/1600/900?random=' + Math.random()"
       alt="img" />
   </div>
 </template>
